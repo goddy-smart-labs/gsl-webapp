@@ -1,37 +1,36 @@
-import type { Metadata } from "next";
-import { Ubuntu, Open_Sans } from 'next/font/google';
-import "./globals.css";
 
-const ubuntu = Ubuntu({
+import './globals.css';
+import type { Metadata } from 'next';
+import { Ubuntu, Inter } from 'next/font/google';
+
+const ubuntu = Ubuntu({ 
   subsets: ['latin'],
   weight: ['300', '400', '500', '700'],
-  variable: '--font-ubuntu',
+  variable: '--font-ubuntu'
 });
 
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-open-sans",
-})
+const inter = Inter({ 
+  subsets: ['latin'],
+  variable: '--font-inter'
+});
 
 export const metadata: Metadata = {
-  title: "Goddy Smart Labs | Design, Strategize, Empower",
-  description: "Empowering innovators and startups by transforming ideas into impactful visual stories and strategic solutions, fueling growth and positive change.",
+  title: 'Goddy Smart Labs - Design, Strategize, Empower',
+  description: 'We don\'t just design — we co-create your future. Empowering innovators and startups by transforming ideas into impactful visual stories and strategic solutions.',
+  keywords: 'design, branding, strategy, startups, UI/UX, creative solutions',
   icons: {
-    icon: './favicon.ico'
+    icon: './favicon.io'
   }
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${ubuntu.variable} ${openSans.variable} font-sans`}
-      >
+    <html lang="en" className={`${ubuntu.variable} ${inter.variable}`}>
+      <body className="font-inter bg-white text-black antialiased">
         {children}
       </body>
     </html>
