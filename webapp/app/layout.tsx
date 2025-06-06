@@ -17,6 +17,9 @@ const openSans = Open_Sans({
 export const metadata: Metadata = {
   title: "Goddy Smart Labs | Design, Strategize, Empower",
   description: "Empowering innovators and startups by transforming ideas into impactful visual stories and strategic solutions, fueling growth and positive change.",
+  icons: {
+    icon: './favicon.ico'
+  }
 };
 
 export default function RootLayout({
